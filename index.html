@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Nuuduu Direct Service Platform - Create your own Book Me button</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Generate a partner-specific Book Me button and discover direct booking links to Nuuduu: verified local services, fair terms, and safe payments." />
+  <!-- IMPORTANT: do NOT add noindex or canonical to nuuduu.com; we want this page indexed and passing PR -->
+  <style>
+    :root{
+      --bg:#0b0d10; --fg:#e8ecf1; --muted:#9fb0c0; --card:#131720; --accent:#6bc2ff; --ok:#22c55e; --border:#263041;
+    }
+    @media (prefers-color-scheme: light){
+      :root{ --bg:#ffffff; --fg:#0b1220; --muted:#4b5b6b; --card:#f7f9fc; --accent:#0ea5e9; --ok:#16a34a; --border:#d5deea; }
+    }
+    *{ box-sizing:border-box; }
+    body{ margin:0; font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; background:var(--bg); color:var(--fg); }
+    .wrap{ max-width:980px; margin:0 auto; padding:32px 20px 80px; }
+    header{ display:flex; align-items:center; gap:14px; margin-bottom:18px; }
+    .brand{ font-weight:700; letter-spacing:.2px; }
+    .card{ background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; margin:14px 0; }
+    h1{ font-size:28px; margin:6px 0 10px; }
+    h2{ font-size:20px; margin:18px 0 8px; }
+    p,.muted{ color:var(--fg); }
+    .muted{ color:var(--muted); }
+    a{ color:var(--accent); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+    label{ display:block; font-size:13px; color:var(--muted); margin-bottom:6px; }
+    input, select{ width:100%; padding:10px 12px; border:1px solid var(--border); background:#0000; color:var(--fg); border-radius:10px; outline:none; }
+    input:focus, select:focus{ border-color:var(--accent); box-shadow:0 0 0 3px color-mix(in oklab, var(--accent) 30%, transparent); }
+    .grid{ display:grid; gap:12px; grid-template-columns:1fr; }
+    @media (min-width:820px){ .grid{ grid-template-columns: 3fr 2fr; } }
+    .row{ display:flex; gap:10px; flex-wrap:wrap; }
+    .btn{ appearance:none; border:1px solid var(--border); background:#0000; color:var(--fg); padding:10px 14px; border-radius:10px; cursor:pointer; }
+    .btn.primary{ background:var(--accent); border-color:var(--accent); color:#fff; }
+    .btn.ok{ background:var(--ok); border-color:var(--ok); color:#fff; }
+    .code{ background:#0a0c10; color:#e8ecf1; border:1px solid var(--border); border-radius:10px; padding:14px; overflow:auto; font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; font-size:13px; }
+    @media (prefers-color-scheme: light){ .code{ background:#0b122014; } }
+    .preview{ display:flex; align-items:center; justify-content:center; padding:16px; min-height:110px; border:1px dashed var(--border); border-radius:12px; }
+    ul.links{ margin:8px 0 0 18px; padding:0; }
+    .two-cols{ display:grid; grid-template-columns:1fr; gap:12px; }
+    @media (min-width:700px){ .two-cols{ grid-template-columns: 1fr 1fr; } }
+    footer{ margin-top:24px; font-size:13px; color:var(--muted); }
+    .hint{ font-size:12px; color:var(--muted); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a href="https://nuuduu.com/" target="_blank" rel="noopener">
+        <img alt="Nuuduu — direct service platform" src="https://nuuduu.com/en-GB/assets/images/book-me.webp" style="height:36px; border-radius:8px; object-fit:cover;">
+      </a>
+      <div class="brand">Nuuduu Book Me – Partner Embed Hub</div>
+    </header>
+
+    <!-- CONTEXTUAL, TEXTUAL LINKS TO NUUDUU (PR-FRIENDLY) -->
+    <div class="card">
+      <h1>Book local services on <a href="https://nuuduu.com/?country=fi" target="_blank" rel="noopener">Nuuduu</a></h1>
+      <p>
+        Nuuduu is a <strong>direct service platform</strong> for verified local professionals. 
+        Customers can <a href="https://nuuduu.com/en-GB/?country=fi" target="_blank" rel="noopener">browse services</a>, 
+        compare availability, prices and book various services like <a href="https://nuuduu.com/en-GB/services/kotisiivous?country=fi" target="_blank" rel="noopener">home cleaning on Nuuduu</a> or other on-demand services with safe payments and fair terms.
+      </p>
+      <div class="two-cols">
+        <div>
+          <h2>Important links</h2>
+          <ul class="links">
+            <li><a href="https://nuuduu.com/en-GB/services/kotisiivous?country=fi" target="_blank" rel="noopener">Book cleaning on Nuuduu</a></li>
+            <li><a href="https://nuuduu.com/partners/en-GB/gthtJqrm?country=fi" target="_blank" rel="noopener">Example partner profile on Nuuduu</a></li>
+            <li><a href="https://nuuduu.com/et/?country=ee" target="_blank" rel="noopener">Nuuduu Eesti – Teenused ja broneerimine</a></li>
+            <li><a href="https://nuuduu.com/lv/?country=lt" target="_blank" rel="noopener">Nuuduu Lietuva – Paslaugos ir užsakymas</a></li>            
+            <li><a href="https://nuuduu.com/lt/?country=lv" target="_blank" rel="noopener">Nuuduu Latvija – Pakalpojumi un rezervēšana</a></li>
+            <li><a href="https://nuuduu.com/en-GB/?country=mt" target="_blank" rel="noopener">Nuuduu Malta – Services and booking</a></li>
+            <li><a href="https://nuuduu.com/fi/?country=fi" target="_blank" rel="noopener">Nuuduu Suomi – palvelut ja varaukset</a></li>
+            <li><a href="https://nuuduu.com/sv/?country=se" target="_blank" rel="noopener">Nuuduu Sverige – boka tjänster</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>For partners</h2>
+          <ul class="links">
+            <li><a href="https://nuuduu.com/partners/en-GB?country=fi" target="_blank" rel="noopener">Nuuduu Partner site</a></li>
+            <li><a href="https://nuuduu.com/partners/en-GB/about?country=fi" target="_blank" rel="noopener">What is Nuuduu for partners</a></li>
+            <li><a href="https://nuuduu.com/partners/en-GB/signin?country=fi" target="_blank" rel="noopener">Become a Nuuduu partner</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- GENERATOR -->
+    <div class="card">
+      <h2>Generate your personal <em>Book Me</em> embed</h2>
+      <p class="muted">Enter your <strong>Partner ID</strong> (the code in your Nuuduu profile URL) and copy the snippet. The generated embed uses a real <code>&lt;a href&gt;</code> with image — and a &lt;noscript&gt; fallback — to maximize crawlability.</p>
+
+      <div class="grid">
+        <div>
+          <label for="pid">Partner ID (required)</label>
+          <input id="pid" placeholder="e.g. OIJG8asn" autocomplete="off">
+        </div>
+        <div>
+          <label for="locale">Locale</label>
+          <select id="locale">
+            <option value="en-GB">en-GB</option>
+            <option value="fi">fi</option>
+            <option value="sv">sv</option>
+            <option value="lt">lt</option>
+            <option value="lv">lv</option>
+            <option value="et">et</option>
+          </select>
+        </div>
+        <div>
+          <label for="width">Button width (px)</label>
+          <input id="width" type="number" min="120" max="480" step="10" value="200">
+        </div>
+        <div>
+          <label for="utm">UTM source (optional)</label>
+          <input id="utm" placeholder="e.g. homepage, linktree, google_business">
+        </div>
+      </div>
+
+      <div class="row" style="margin-top:14px;">
+        <button class="btn primary" id="build">Generate</button>
+        <button class="btn" id="copyHtml" disabled>Copy HTML</button>
+        <button class="btn" id="copyNoscript" disabled>Copy &lt;noscript&gt;</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Live preview</h2>
+      <div id="preview" class="preview muted">Enter your Partner ID and click “Generate”.</div>
+      <div class="hint">Preview renders a plain anchor + image (no shadow DOM), so crawlers see a normal link structure.</div>
+    </div>
+
+    <div class="card">
+      <h2>Embed code (HTML)</h2>
+      <pre class="code" id="codeHtml">&lt;!-- Fill the form above and click Generate --&gt;</pre>
+      <div class="hint">Paste this into WordPress “Custom HTML”, Blogger “HTML/JavaScript”, Carrd “Embed → Code”, Neocities, Replit, Glitch, Bitbucket Pages, etc.</div>
+    </div>
+
+    <div class="card">
+      <h2>Fallback for non-JS environments (&lt;noscript&gt;)</h2>
+      <pre class="code" id="codeNoscript">&lt;!-- Shows a guaranteed crawlable link if JavaScript is blocked --&gt;</pre>
+    </div>
+
+    <!-- EXTRA CONTEXTUAL LINKS (more semantically varied anchors) -->
+    <div class="card">
+      <h2>Direct booking categories on Nuuduu</h2>
+      <p>Explore and book trusted local professionals on Nuuduu:</p>
+      <ul class="links">
+        <li><a href="https://nuuduu.com/fi/services/kotisiivous?country=fi" target="_blank" rel="noopener">Home cleaning on Nuuduu</a></li>
+        <li><a href="https://nuuduu.com/en-GB/?country=fi" target="_blank" rel="noopener">Browse services and book on Nuuduu</a></li>
+        <li><a href="https://nuuduu.com/?country=fi" target="_blank" rel="noopener">Nuuduu — direct service platform</a></li>
+      </ul>
+    </div>
+
+    <footer>
+      © Nuuduu — <a href="https://nuuduu.com/?country=fi" target="_blank" rel="noopener">Official site</a>
+    </footer>
+  </div>
+
+  <script>
+    const $ = (id)=>document.getElementById(id);
+    const pid = $('pid'), locale = $('locale'), width = $('width'), utm = $('utm');
+    const buildBtn = $('build'), copyHtmlBtn = $('copyHtml'), copyNoscriptBtn = $('copyNoscript');
+    const codeHtml = $('codeHtml'), codeNoscript = $('codeNoscript'), preview = $('preview');
+
+    function build(){
+      const id = pid.value.trim();
+      if(!id){ alert('Please enter your Partner ID'); return; }
+      const loc = locale.value.trim() || 'en-GB';
+      const w = Math.min(Math.max(parseInt(width.value||200,10), 120), 480);
+      const utmSrc = utm.value.trim();
+      const utmStr = utmSrc ? `?utm_source=${encodeURIComponent(utmSrc)}&utm_medium=embed` : '?utm_medium=embed';
+
+      const pageUrl = `https://nuuduu.com/${loc}/partners/${encodeURIComponent(id)}${utmStr}`;
+      const imgUrl  = `https://nuuduu.com/${loc}/assets/images/book-me.webp`;
+
+      const html = `<a href="${pageUrl}" target="_blank" rel="noopener">
+  <img style="width: ${w}px;" src="${imgUrl}" alt="Book me on Nuuduu">
+</a>`;
+
+      const nos = `<noscript>
+  <a href="${pageUrl}" rel="noopener">
+    <img style="width: ${w}px;" src="${imgUrl}" alt="Book me on Nuuduu">
+  </a>
+</noscript>`;
+
+      codeHtml.textContent = html;
+      codeNoscript.textContent = nos;
+
+      preview.innerHTML = html;
+      preview.classList.remove('muted');
+
+      copyHtmlBtn.disabled = false;
+      copyNoscriptBtn.disabled = false;
+    }
+
+    async function copyText(el, what, reset){
+      try{ await navigator.clipboard.writeText(what.textContent); el.textContent = 'Copied!'; setTimeout(()=>el.textContent=reset,1200);}catch(e){}
+    }
+
+    buildBtn.addEventListener('click', build);
+    copyHtmlBtn.addEventListener('click', ()=>copyText(copyHtmlBtn, codeHtml, 'Copy HTML'));
+    copyNoscriptBtn.addEventListener('click', ()=>copyText(copyNoscriptBtn, codeNoscript, 'Copy <noscript>'));
+
+    // Prefill from query (?id=...&locale=...&utm=...&w=...)
+    const q = new URLSearchParams(location.search);
+    if(q.get('id')) pid.value = q.get('id');
+    if(q.get('locale')) locale.value = q.get('locale');
+    if(q.get('utm')) utm.value = q.get('utm');
+    if(q.get('w')) width.value = q.get('w');
+    if(pid.value) build();
+  </script>
+
+  <!-- Static fallback snippet for users with JS fully disabled -->
+  <noscript>
+    <div class="wrap">
+      <div class="card">
+        JavaScript is disabled. Use this static embed:
+        <pre class="code">
+&lt;a href="https://nuuduu.com/en-GB/partners/PARTNER-IDENTIFIER?utm_medium=embed" rel="noopener"&gt;
+  &lt;img style="width: 200px;" src="https://nuuduu.com/en-GB/assets/images/book-me.webp" alt="Book me on Nuuduu"&gt;
+&lt;/a&gt;
+        </pre>
+        Or visit <a href="https://nuuduu.com/" target="_blank">Nuuduu</a> to book directly.
+      </div>
+    </div>
+  </noscript>
+</body>
+</html>
