@@ -2,9 +2,9 @@
 <html lang="fi">
 <head>
   <meta charset="utf-8">
-  <title>Nuuduu – suoran palvelun alusta – Luo oma Book Me -painike</title>
+  <title>Nuuduu – suorapalvelualusta – Luo oma Tilaa -painike</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Luo kumppanikohtainen Book Me -painike ja löydä suorat varauslinkit Nuuduu-palveluun: varmennetut paikalliset palvelut, reilut ehdot ja turvalliset maksut." />
+  <meta name="description" content="Luo kumppanikohtainen Tilaa -painike ja löydä suorat varauslinkit Nuuduu-palveluun: varmennetut paikalliset palvelut, reilut ehdot ja turvalliset maksut." />
   <meta name="google-site-verification" content="H6X7ErsihN6qnnMZJC9Oo_6p1pUuqldPuNW95Ia4B_4" />
   <!-- TÄRKEÄÄ: älä lisää noindex- tai canonical-viittausta nuuduu.comiin; haluamme tämän sivun indeksoituvan ja välittävän PR:ää -->
   <style>
@@ -49,9 +49,9 @@
   <div class="wrap">
     <header>
       <a href="https://nuuduu.com/" target="_blank" rel="noopener">
-        <img alt="Nuuduu — suoran palvelun alusta" src="https://nuuduu.com/en-GB/assets/images/book-me.webp" style="height:36px; border-radius:8px; object-fit:cover;">
+        <img alt="Nuuduu — suoran palvelun alusta" src="https://nuuduu.com/en-GB/assets/images/order.webp" style="height:36px; border-radius:8px; object-fit:cover;">
       </a>
-      <div class="brand">Nuuduu Book Me – Kumppanien upotuskooste</div>
+      <div class="brand">Nuuduu Tilaa-nappi – Kumppanien upotuskooste</div>
     </header>
 
     <!-- KONTEXTUAALISET, TEKSTIPERUSTEISET LINKIT NUUDUU-SEEN (PR-YSTÄVÄLLISET) -->
@@ -89,7 +89,7 @@
 
     <!-- GENERAATTORI -->
     <div class="card">
-      <h2>Luo henkilökohtainen <em>Book Me</em> -upotus</h2>
+      <h2>Luo henkilökohtainen <em>Tilaa -nappi</em> -upotus</h2>
       <p class="muted">Syötä <strong>kumppani-ID</strong> (koodi Nuuduu-profiilisi URL-osoitteessa) ja kopioi koodi. Luotu upotus käyttää oikeaa <code>&lt;a href&gt;</code> -linkkiä kuvan kanssa — sekä &lt;noscript&gt;-vararatkaisua — jotta hakurobotit varmasti näkevät linkin.</p>
 
       <div class="grid">
@@ -173,15 +173,15 @@
       const utmStr = utmSrc ? `?utm_source=${encodeURIComponent(utmSrc)}&utm_medium=embed` : '?utm_medium=embed';
 
       const pageUrl = `https://nuuduu.com/${loc}/partners/${encodeURIComponent(id)}${utmStr}`;
-      const imgUrl  = `https://nuuduu.com/${loc}/assets/images/book-me.webp`;
+      const imgUrl  = `https://nuuduu.com/${loc}/assets/images/order.png`;
 
       const html = `<a href="${pageUrl}" target="_blank" rel="noopener">
-  <img style="width: ${w}px;" src="${imgUrl}" alt="Book me on Nuuduu">
+  <img style="width: ${w}px;" src="${imgUrl}" alt="Order my services on Nuuduu">
 </a>`;
 
       const nos = `<noscript>
   <a href="${pageUrl}" rel="noopener">
-    <img style="width: ${w}px;" src="${imgUrl}" alt="Book me on Nuuduu">
+    <img style="width: ${w}px;" src="${imgUrl}" alt="Order my services on Nuuduu">
   </a>
 </noscript>`;
 
@@ -219,7 +219,7 @@
         JavaScript on pois käytöstä. Käytä tätä staattista upotusta:
         <pre class="code">
 &lt;a href="https://nuuduu.com/en-GB/partners/PARTNER-IDENTIFIER?utm_medium=embed" rel="noopener"&gt;
-  &lt;img style="width: 200px; height: 61px;" src="https://nuuduu.com/en-GB/assets/images/book-me.webp" alt="Book me on Nuuduu"&gt;
+  &lt;img style="width: 200px; height: 61px;" src="https://nuuduu.com/en-GB/assets/images/order.png" alt="Order my services on Nuuduu"&gt;
 &lt;/a&gt;
         </pre>
         Tai siirry suoraan sivulle <a href="https://nuuduu.com/" target="_blank">Nuuduu</a> tehdäksesi varauksen.
