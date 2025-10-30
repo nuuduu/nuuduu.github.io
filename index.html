@@ -140,11 +140,6 @@
       <div class="hint">Liitä tämä WordPressin ”Custom HTML” -lohkoon, Bloggerin ”HTML/JavaScript” -gadgetiin, Carrdin ”Embed → Code” -kohtaan, Neocitiesiin, Replitiin, (aiemmin Glitch), Bitbucket Pagesiin jne.</div>
     </div>
 
-    <div class="card">
-      <h2>Vararatkaisu ilman JavaScriptiä (&lt;noscript&gt;)</h2>
-      <pre class="code" id="codeNoscript">&lt;!-- Näyttää varmasti indeksoitavan linkin, jos JavaScript on estetty --&gt;</pre>
-    </div>
-
     <!-- LISÄKONTEKSTIA (vaihtelevat ankkuritekstit) -->
     <div class="card">
       <h2>Suorat varauskategoriat Nuuduussa</h2>
@@ -165,7 +160,7 @@
     const $ = (id)=>document.getElementById(id);
     const pid = $('pid'), locale = $('locale'), width = $('width'), utm = $('utm');
     const buildBtn = $('build'), copyHtmlBtn = $('copyHtml'), copyNoscriptBtn = $('copyNoscript');
-    const codeHtml = $('codeHtml'), codeNoscript = $('codeNoscript'), preview = $('preview');
+    const codeHtml = $('codeHtml'), preview = $('preview');
 
     function build(){
       const id = pid.value.trim();
@@ -182,14 +177,7 @@
   <img style="width: ${w}px;" src="${imgUrl}" alt="Order my services on Nuuduu">
 </a>`;
 
-      const nos = `<noscript>
-  <a href="${pageUrl}" rel="noopener">
-    <img style="width: ${w}px;" src="${imgUrl}" alt="Order my services on Nuuduu">
-  </a>
-</noscript>`;
-
       codeHtml.textContent = html;
-      codeNoscript.textContent = nos;
 
       preview.innerHTML = html;
       preview.classList.remove('muted');
